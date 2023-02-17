@@ -10,7 +10,7 @@ services:
       POSTGRES_PASSWORD: admin
       POSTGRES_DB: parking-control-db
     volumes:
-      - postgres-data:/var/lib/postgresql/data
+      - ./postgres-data:/var/lib/postgresql/data
     restart: unless-stopped
 
   pgadmin:
@@ -26,5 +26,3 @@ services:
 
 volumes:
   postgres-data:
-#Rodar o comando docker compose up -d // para subir a aplicação
-#Para parar a apliucação é docker compose down
